@@ -280,18 +280,33 @@ const render = () => {
     // Create the checkbox
       const checkBox = document.createElement('input');
       checkBox.type = 'checkbox';
-      checkBox.style = 'margin-right: 10px';
+      checkBox.className = 'checkbox';
       checkBox.onclick = onCheckBox(todo);
       // Important: when we create the checkbox, we look at the isDone property of the object,
       // because we want to check the box if we have just loaded the local data
       checkBox.checked = todo.isDone;
 
-      todosLineBoxLeft.prepend(checkBox);
+      // Create a div around the checkbox so that we cann add the tooltip "Mark as done"
+      // when we hover over the checkbox (it somehow doesn't work wihtout a div, but it does
+      // work for a button without a div)
+      const checkboxDiv = document.createElement('div');
+      checkboxDiv.className = 'checkboxDiv';      
+      checkboxDiv.style = 'margin-right: 8px';
+      checkboxDiv.appendChild(checkBox);
+
+      // Create the tooltip for when we hover over the checkbox
+      const toolTipCheckBox = document.createElement('div');
+      toolTipCheckBox.className = 'toolTipCheckBox';
+      toolTipCheckBox.innerText = 'Check';
+      checkboxDiv.appendChild(toolTipCheckBox);
+
+      todosLineBoxLeft.prepend(checkboxDiv);
     
 
     // Create the Edit button
       const editButton = document.createElement('button');
       editButton.innerText = 'Edit';
+      editButton.className = 'editbutton';
       editButton.onclick = onEdit(todo);
 
       todosLineBoxRight.appendChild(editButton);
