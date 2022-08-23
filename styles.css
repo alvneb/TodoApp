@@ -1,0 +1,109 @@
+body {
+  font-family: Arial;
+}
+
+.all{
+  display: inline-block;
+  padding: 15px 15px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(42, 138, 150);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  background-color: white;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
+
+.DelDoneTodos-button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.addTodo-button,
+.DelDoneTodos-button,
+.DelAllTodos-button {
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-weight: bold;  
+  color: white;
+}
+
+.addTodo-button {
+  background-color: rgb(66, 170, 230);
+  margin-left: 10px;
+}
+
+.DelDoneTodos-button {
+  background-color: rgb(41, 160, 41);
+  margin-right: 5px;
+}
+
+.DelAllTodos-button {
+  background-color: rgb(210, 119, 119);
+}
+
+#todo-list {
+  display: inline-block;
+  padding: 10px 15px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(173, 173, 244);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  width: 400px;
+  background-color: rgb(226, 226, 237);
+}
+
+.todosText {
+  font-size: 15px;
+}
+
+.todosLineFlexBox button {
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 12px;  
+  color: black;
+  background-color: rgb(241, 230, 230);
+}
+
+.todosLineFlexBox {  
+  display: flex;
+  align-items: center;
+
+  
+  background-color: rgb(255, 251, 251);
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.15);
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  border-radius: 5px;
+  
+  margin: 10px 0px;
+  padding: 5px 8px;
+}
+
+.todosLineBoxLeft {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+}
+
+
+.todosLineBoxRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  
+  height: 35px;
+  width: 100px;
+}

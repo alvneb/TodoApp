@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+
+    <div class="all">
+      <h1>
+        Todo App
+      </h1>
+
+      <input id="todo-title" onkeypress="clickPress(event);" type="text" placeholder="Enter new task">
+
+      <input id="date-picker" type="date">
+
+      <button onclick="onAddTodo();" class="addTodo-button">Add Todo</button>
+
+      <div>
+        <button onclick="onDeleteDoneTodos();" class="DelDoneTodos-button" >Delete done Todos</button>
+        <button onclick="onDeleteAllTodos();" class="DelAllTodos-button" >Delete all Todos</button>
+      </div>
+
+      <!-- Div where all the todos will be appended -->
+      <div id="todo-list"></div>
+
+    </div>
+
+  </body>
+</html>
